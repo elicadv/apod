@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt - br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header>
+        
+        <h1>Apod</h1>
+       
+    </header>
+    
+    <main>
+        <h2> <i>A cada dia uma imagem ou foto é tirada do universo, 
+            escolha uma data e veja a imagem!!!</i></h2>
+    <form>
+
+    <p class="textoescolha"><i><b>Escolha uma data:</b></p></i></p>
+
+    <div>
+    <input type="date" id="data" min="1995-06-20" name="data">
+    </div>
+
+    <input type="button" id="botao" value="Pesquisar">
+       
+    <div id="mostrar">
+        <p id= "imagem"></p>
+        <p id= "titulo"></p>
+        <p id = "explanation"></p>
+        <p id = "copyright"></p>
+    </div>
+
+    </form>
+
+    <footer id="footer">©   Élica Dias - 2022</footer>
+       
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

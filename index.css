@@ -1,0 +1,28 @@
+body{
+    background-image: url(./img/Design\ sem\ nome.gif);
+    background-size: cover;
+    text-align: center;
+}
+p{
+    color: white;
+    font-size: 20px;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    
+}
+h2{
+    color: white;
+    margin-top: 5%;
+
+}
+footer{
+    margin-top: 15%;
+    color: white;
+}
+.textoescolha{
+    font-size: 30px;
+}
