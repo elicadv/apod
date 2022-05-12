@@ -1,6 +1,4 @@
-var btn = document.querySelector('#botao')
-
-btn.addEventListener("click", function (event) {
+$("#botao").click(function (event) {
   event.preventDefault();
   escolhaData();
 });
@@ -8,6 +6,25 @@ btn.addEventListener("click", function (event) {
   function escolhaData() {
   
     var data = $('#data').val();
+    
+    
+    function escolhaImagem(resultado){
+        var img = $("#imagem");
+        var titulo = $("#titulo");
+        var explanation = $("#explanation");
+        var copyright = $("#copyright");
+        
+      
+        titulo.text(`${resultado.title}`);
+        explanation.text(`${resultado.explanation}`);
+        copyright.text(`${resultado.copyright}`);
+      
+        if(resultado.media_type == 'image') {
+          img.html(`<img class='img' src="${resultado.url}"/>`)
+        } else {
+          img.html(`<iframe class="img" src="${resultado.url}?autoplay=1&mute=1"></iframe>`)
+          }
+        }
   
   
     $.ajax({
@@ -21,23 +38,7 @@ btn.addEventListener("click", function (event) {
     
     });
   };
-function escolhaImagem(resultado){
-  var imagem = $("#imagem");
-  var titulo = $("#titulo");
-  var explanation = $("#explanation");
-  var copyright = $("#copyright");
 
-  titulo.html(`${resultado.title}`);
-  explanation.html(`${resultado.explanation}`);
-  copyright.html(`${resultado.copyright}`);
-  
-
-  if(resultado.media_type == 'image') {
-    imagem.html(`<img class='img' src="${resultado.url}"/>`)
-  } else {
-    imagem.html(`<iframe class="img" src="${resultado.url}?autoplay=1&mute=1"></iframe>`)
-    }
-  }
 
 
 
